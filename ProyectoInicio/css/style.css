@@ -1,0 +1,809 @@
+:root {
+    --ColorPrincipal: #00E497;
+    --ColorSecundario: #02052F;
+    /* --FontPrincipal: 'Sigmar', cursive; */
+    --FontPrincipal: 'Open Sans', sans-serif;
+}
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--FontPrincipal);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ESTO ME HACE QUE LA REALCIÓN ENTRE REM Y PX SEA DE 
+1REM=10PX */
+
+
+/* aplicamos estilos PARA EL HEADER */
+
+.Login {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 15px;
+    padding-bottom: 24px;
+
+
+}
+
+.Login a {
+    color: var(--ColorPrincipal);
+}
+
+.Login a:hover {
+    text-decoration: underline;
+}
+
+.Separador {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* APLICAMOS ESTILOS PARA EL NAV*/
+
+.MenuPrincipal {
+    display: flex;
+}
+
+.MenuImagen {
+    display: flex;
+    flex: 34%;
+    max-width: 34%;
+    justify-content: flex-start;
+}
+
+.MenuEnlaces {
+    display: flex;
+    flex: 66%;
+    max-width: 66%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.MenuEnlaces a {
+    margin-left: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ColorSecundario);
+
+}
+
+.MenuEnlaces .info {
+    background-color: var(--ColorPrincipal);
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0.8rem 1.3rem;
+    text-decoration: none;
+}
+
+.MenuEnlaces a:hover {
+    text-decoration: underline;
+}
+
+.MenuEnlaces .info:hover {
+    text-decoration: none;
+    background-color: #117a8b;
+}
+
+
+@media(max-width:768px){
+
+    .MenuImagen{
+        flex: 100%;
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .MenuEnlaces{
+        flex: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .MenuPrincipal{
+        flex-wrap: wrap;
+    }
+
+    .MenuEnlaces a{
+        margin: 0px;
+        border-top: 1px solid var(--ColorSecundario);
+        padding: 10px 0px;
+        display: block;
+    }
+
+}
+
+
+
+
+
+.Titulo {
+    color: var(--ColorPrincipal);
+    display: flex;
+    flex-direction: column;
+    flex: 66%;
+    max-width: 66%;
+}
+
+
+
+
+
+.PrimeraSeccion {
+    background-image: url(../img/11641891319_banner_zona_norte.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Titulo strong {
+    color: var(--ColorSecundario);
+    background-color: white;
+    font-family: var(--FontPrincipal);
+    font-size: 4.7rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    border-radius: 10px;
+    padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+    max-width: fit-content;
+    /* padding: 3px 15px; */
+    /* padding-top: 3px;
+    padding-left: 15px;
+    padding-bottom: 3px;
+    padding-right: 15px; */
+
+}
+
+.Titulo {
+    padding-top: 80px;
+    margin-bottom: 3rem;
+}
+
+.PrimeraSeccion {
+    padding-bottom: 180px;
+}
+
+.PrimeraSeccion a {
+    background-color: var(--ColorSecundario);
+    color: #fff;
+    padding: 2.4rem 9.4rem;
+    border-radius: 1rem;
+
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.4rem;
+    border: 2px solid var(--ColorSecundario);
+}
+
+.PrimeraSeccion a:hover {
+    background-color: #fff;
+    color: var(--ColorSecundario);
+
+}
+
+
+
+@media(max-width:1140px){
+    .Titulo{
+        flex:100%;
+        max-width: 100%;
+    }
+
+    .Titulo strong{
+        font-size: 3.7rem;
+    }
+}
+
+@media(max-width:768px){
+    .PrimeraSeccion a{
+        display: block;
+        text-align: center;
+    }
+}
+
+
+.contenedor {
+    width: 50%;
+    margin: 0 auto;
+}
+
+@media(max-width:1140px) {
+    .contenedor {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width:768px) {
+    .contenedor {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.EjercicioFlex {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 50%;
+    max-width: 50%;
+}
+
+.EjercicioFlex a {
+    color: white;
+    font-weight: bold;
+}
+
+/* CLASES PARA LA SECCION DE LOGOTIPOS */
+
+.Logos {
+    display: flex;
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px 0px;
+    margin-top: -9rem;
+}
+
+.LogosOficiales {
+    display: flex;
+    flex: 70%;
+    max-width: 70%;
+    justify-content: center;
+}
+
+.LogoAdecco {
+    display: flex;
+    flex: 30%;
+    max-width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+.Logos img{
+    max-width: 100%;
+    padding: 10px;
+}
+
+@media (max-width:768px) {
+    .Logos{
+        flex-wrap: wrap;
+    }
+    .LogoAdecco{
+        flex:100%;
+        max-width: 100%;
+        padding-top: 20pxt;
+    }
+    .LogosOficiales{
+        flex:100%;
+        max-width: 100%;
+    }
+}
+
+
+/* @media (min-width:480px){
+    body{
+        background-color:blue;
+    }
+}
+
+@media (min-width:750px){
+    body{
+        background-color:yellow;
+    }
+}
+
+@media (min-width:900px){
+    body{
+        background-color:red;
+    }
+} */
+
+/* SECCION DE CURSOS CON LAS CIUDADES DONDE SE IMPARTEN*/
+
+.SeccionCursos h3,
+.SeccionCursos h2 {
+    font-weight: 800;
+    font-family: var(--FontPrincipal);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.SeccionCursos h3 {
+    color: var(--ColorPrincipal);
+    font-size: 1.7rem;
+    /* padding-top: 40px;
+    padding-bottom: 40px; */
+    padding: 40px 0px;
+}
+
+.SeccionCursos h2 {
+    color: var(--ColorSecundario);
+    font-size: 2.7rem;
+    padding-bottom: 50px;
+}
+
+.SeccionCursos a {
+    background-color: white;
+    color: var(--ColorSecundario);
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: 1px solid var(--ColorPrincipal);
+    text-transform: uppercase;
+
+
+}
+
+.SeccionCursos .botonesciudad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  
+}
+
+.SeccionCursos a:hover {
+    background-color: var(--ColorPrincipal);
+    color: white;
+}
+
+.SeccionCursos .VerTodo {
+    background-color: var(--ColorPrincipal);
+    color: white;
+}
+
+.SeccionCursos .VerTodo:hover {
+    background-color: white;
+    color: var(--ColorSecundario);
+}
+
+/* SECCION DE FICHAS*/
+.SeccionFichas div {
+    padding: 40px 60px;
+    background-position: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 50%;
+    max-width: 50%;
+    /* margin-right: 15px;
+    margin-left: 15px; */
+    border-radius: 10px;
+}
+
+.CursoMarketing {
+    background-image: url(../img/Curso-marketing-digital-norte.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 15px
+}
+
+.CursoFullstack {
+    background-image: url(../img/Curso-programacion-web-full-stack-norte.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 15px;
+}
+
+.SeccionFichas {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 85px;
+}
+
+.SeccionFichas a {
+    padding: 25px 44px;
+    background-color: white;
+    border: 2px solid white;
+    font-family: "DinBold", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--ColorSecundario);
+    border-radius: 10px;
+    text-transform: uppercase;
+    max-width: fit-content;
+    margin-top: 80px;
+}
+
+.SeccionFichas a:hover {
+    background-color: var(--ColorPrincipal);
+    color: white;
+}
+
+.SeccionFichas h2 {
+    font-size: 2.7rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+@media(max-width:1140px){
+    .SeccionFichas a{
+        margin-top: 40px;
+    }
+}
+
+@media(max-width:768px){
+
+    .SeccionFichas{
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap:20px;
+        /* flex-direction: column; */
+    }
+    .SeccionFichas div{
+        /* flex: 100%;*/
+        max-width: 100%;
+        margin:0px; 
+    }
+}
+/* ESTILOS SECCION PIDENOSLO*/
+
+.Pidelo h3 {
+    font-weight: 800;
+    font-size: 1.7rem;
+    color: var(--ColorSecundario);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 100px;
+}
+
+.Pidelo a {
+    background-color: var(--ColorPrincipal);
+    color: white;
+    font-weight: 700;
+    border-radius: 96px;
+    margin-top: 20px;
+    padding: 20px 40px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.Pidelo {
+    text-align: center;
+}
+
+
+/*SECCION DE TEXTOS*/
+
+.SeccionTextos {
+    display: flex;
+}
+
+.SeccionTextos div {
+    flex: 50%;
+    max-width: 50%;
+}
+
+.TextoIzquierda h3 {
+    color: var(--ColorPrincipal);
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.TextoIzquierda h2 {
+    color: var(--ColorSecundario);
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.TextoIzquierda p {
+    color: var(--ColorSecundario);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.TextoIzquierda h4 {
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.5;
+    color: var(--ColorSecundario);
+}
+
+.PrimerEnlace {
+    color: var(--ColorPrincipal);
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.TextoIzquierda .Infografia {
+    font-weight: 800;
+    margin-top: 50px;
+}
+
+.SegundoEnlace {
+    background-color: var(--ColorSecundario);
+    padding: 20px 40px;
+    border: 2px solid var(--ColorSecundario);
+    color: white;
+    text-transform: uppercase;
+    font-family: "DinBold", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.SegundoEnlace:hover {
+    background-color: var(--ColorPrincipal);
+    color: var(--ColorSecundario);
+}
+
+.TextoDerecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.TextoDerecha h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.TextoDerecha p {
+    background-color: var(--ColorSecundario);
+    padding: 13px 40px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 27px;
+    margin: 0 0 10px 0;
+    border-radius: 10px;
+}
+
+.TextoDerecha a {
+    background-color: var(--ColorPrincipal);
+    max-width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--ColorSecundario);
+    font-weight: 800;
+    padding: 13px 40px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.EjBoxModel {
+    height: 500px;
+    margin: 100px;
+    padding: 20px;
+    border: 2px solid black;
+    background-image: linear-gradient(to left, red 10%, blue 70%);
+    position: relative;
+    box-shadow: 14px 26px 21px 1px rgba(0, 0, 0, 0.49);
+}
+
+.EjBoxModel h2:after {
+    content: "AÑADIDO DESDE CSS, NO SE PUEDE COPIAR";
+}
+
+.EjBoxModel h2 {
+
+
+    position: absolute;
+}
+
+/* ESTILOS SECCION DEL VIDEO*/
+
+.SeccionVideo {
+    margin-top: 150px;
+    margin-bottom: 70px;
+    /* position: relative; */
+    width: 100%;
+    display: block;
+}
+
+.SeccionVideo iframe {
+    /* position: absolute; */
+    display: block;
+    width: 100%;
+    height: 625px;
+    top: 0px;
+    left: 0px;
+}
+
+/*ESTILOS PARA LA SECCION LOCALIZACIONES*/
+
+.SeccionLocalizaciones {
+    background-color: var(--ColorSecundario);
+    margin-top: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.SeccionLocalizaciones h2,
+.SeccionLocalizaciones h3,
+.SeccionLocalizaciones p {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.SeccionLocalizaciones h2 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.CiudadesLocalizacion {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.CiudadesLocalizacion div {
+    flex: 25%;
+    max-width: 25%;
+    padding-right: 15px;
+}
+
+.CiudadesLocalizacion h3 {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.CiudadesLocalizacion p {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+/* ESTILOS SECCION CONTACTO*/
+
+.SeccionContacto {
+    background-color: var(--ColorPrincipal);
+    padding-top: 90px;
+    padding-bottom: 150px;
+}
+
+.SeccionContacto h3 {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.SeccionContacto h2 {
+    color: white;
+    font-size: 2.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.ContenedorContacto {
+    display: flex;
+}
+
+.ContenedorContacto div {
+    flex: 50%;
+    max-width: 50%;
+    background-color: white;
+    border-radius: 2.5px;
+    padding: 25px 40px 40px 40px;
+}
+
+.ContenedorContacto p {
+    text-transform: uppercase;
+    color: var(--ColorSecundario);
+    font-weight: 800;
+}
+
+.ContenedorContacto a {
+    color: var(--ColorPrincipal);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.ContenedorContacto a:hover {
+    text-decoration: underline;
+}
+
+
+.Contacto1:before {
+    content: url(../img/ico-TLF.png);
+}
+
+.Contacto2:before {
+    content: url(../img/ico-EMAIL.png);
+}
+
+.Contacto1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Contacto2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* EXPLICACION GRID EN SECCION LOCALIZACIONES*/
+
+.CiudadesLocalizacionGrid {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+}
+
+/*ESTILOS FOOTER*/
+
+.MenuFooter {
+    padding: 50px 0px;
+    border-bottom: 1px solid var(--ColorSecundario);
+}
+
+.MenuFooter a {
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #02052F;
+    padding-right: 60px;
+}
+
+.PaginasLegales {
+    padding: 20px 0px;
+    border-bottom: 1px solid var(--ColorSecundario);
+    margin-bottom: 40px;
+}
+
+.PaginasLegales a {
+    font-size: 14px;
+    text-decoration: underline;
+    color: #02052F;
+    padding-right: 50px;
+}
+
+.PaginasLegales a:hover {
+    color: #0056b3;
+}
+
+
+/* BOTONES FIJOS*/
+
+.BotonFijoInformate {
+    position: fixed;
+    right: 0px;
+    top: 320px;
+}
+
+.BotonUp {
+    position: fixed;
+    bottom: 75px;
+    right: 40px;
+}
+
+.BotonUp img {
+    width: 60px;
+    height: 60px;
+}

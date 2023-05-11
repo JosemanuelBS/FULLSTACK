@@ -575,9 +575,10 @@ a {
     padding: 13px 40px;
     color: #fff;
     font-weight: 600;
-    font-size: 27px;
+    font-size: 20px;
     margin: 0 0 10px 0;
     border-radius: 10px;
+    text-align: right;
 }
 
 .TextoDerecha a {
@@ -591,6 +592,30 @@ a {
     border-radius: 10px;
     font-size: 14px;
 }
+
+@media(max-width:1140px){
+    .SeccionTextos{
+        display: grid;
+        grid-template-rows: 3fr 2fr;
+        grid-template-columns: 1fr;
+    }
+    .SeccionTextos div{
+        max-width: 100%;
+    }
+}
+
+@media(max-width:768px){
+    .SegundoEnlace{
+        display: block;
+        text-align: center;
+    }
+
+    .TextoDerecha a{
+        max-width: 100%;   
+    }
+}
+
+
 
 .EjBoxModel {
     height: 500px;
@@ -630,6 +655,19 @@ a {
     top: 0px;
     left: 0px;
 }
+
+@media(max-width:1140px){
+    .SeccionVideo iframe{
+        height: 400px;
+    }
+}
+
+@media(max-width:768px){
+    .SeccionVideo iframe{
+        height: 250px;
+    }
+}
+
 
 /*ESTILOS PARA LA SECCION LOCALIZACIONES*/
 
@@ -673,6 +711,29 @@ a {
     margin-top: 0px;
     padding-top: 0px;
 }
+
+@media(max-width:1140px){
+    .CiudadesLocalizacion{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .CiudadesLocalizacion div{
+        max-width:100%;
+    }
+}
+@media(max-width:768px){
+    .CiudadesLocalizacion{
+        display:grid;
+        grid-template-columns: 1fr;
+
+
+    }
+    .CiudadesLocalizacion div{
+        max-width:100%;
+    }
+}
+
+
 
 /* ESTILOS SECCION CONTACTO*/
 
@@ -718,6 +779,7 @@ a {
     color: var(--ColorPrincipal);
     font-size: 14px;
     font-weight: 800;
+    display: block;
 }
 
 .ContenedorContacto a:hover {
@@ -745,6 +807,18 @@ a {
     align-items: center;
 }
 
+
+@media(max-width:1140px){
+    .ContenedorContacto{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .ContenedorContacto div{
+        max-width: 100%;
+        margin-top: 10px;
+    }
+}
 
 /* EXPLICACION GRID EN SECCION LOCALIZACIONES*/
 
@@ -789,6 +863,26 @@ a {
 }
 
 
+@media(max-width:768px){
+    .MenuFooter{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .MenuFooter a{
+        margin-top: 10px;
+    }
+
+    .PaginasLegales a{
+        padding-right: 20px;
+        padding-top: 10px;
+        display: inline-block;
+        
+    }
+    .PaginasLegales{
+        margin-bottom: 100px;
+    }
+}
+
 /* BOTONES FIJOS*/
 
 .BotonFijoInformate {
@@ -806,4 +900,61 @@ a {
 .BotonUp img {
     width: 60px;
     height: 60px;
+}
+
+/* EJERCICIO PARA EXPLICAR EL GRID-ROW Y GRID-COLUMN*/
+
+.EjercicioGrid{
+    display: grid;
+    grid-template-columns: 10% 40% 20% 20% 10%;
+    grid-template-rows: 200px 600px 200px;
+}
+
+.Hijo1{
+    background-color: red;
+    
+    grid-row: 1;
+    grid-column: 2/4;
+}
+
+.Hijo2{
+    background-color: green;
+    
+    grid-row: 2/4;
+    grid-column: 4/6;
+}
+
+.Hijo3{
+    background-color: blue;
+    
+    grid-row: 2/4;
+    grid-column: 1;
+}
+
+/*ULTIMA SECCION, SOLO VISIBLE PARA MOVIL*/
+
+.SeccionFija{
+    background-color: var(--ColorPrincipal);
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+.SeccionFija p{
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 1.7rem;
+
+}
+
+@media(min-width:768px){
+
+    .SeccionFija{
+        display: none;
+    }
+
 }

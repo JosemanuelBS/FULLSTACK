@@ -1,0 +1,188 @@
+/* 
+EL ROL DE JAVASCRIPT
+            
+!!!!!!!!!!!!!!
+DIAPOSITIVA 16
+
+    DOM: ETIQUETAS Y RELACIONES ENTRE ETIQUETAS.
+    COMO ESTÁN CONECTADOS LOS DIFERENTES ELEMENTOS DE MI  WEB
+
+    NUESTRO PRIMER CÓDIGO JAVASCRIPT
+    EN EL BODY
+
+    <script>
+        alert("Hola Mundo");
+    </script>
+
+    CADA NAVEGADOR TIENE SU PROPIO MOTOR INTERNO
+
+    RECOMENDABLE ANTES DEL CIERRE DE LA ETIQUETA BODY </body>
+
+    RECOMENDABLE:
+
+    CREAR UNA CARPETA js DONDE ALOJAR LOS LOS ARCHIVOS DE JAVASCRIPT
+
+    CREAMOS NUESTRO PRIMER ARCHIVO script.js
+
+    <script src="js/script.js"> </script>
+
+
+
+VARIABLES
+
+
+LAS VARIABLES Y LAS FUNCIONES SON UNA CARACTERISTICA DE UN LENGUAJE
+DE PROGRAMACION
+
+
+    VAR
+    LET
+    CONST
+
+*/
+ 
+
+let producto = "Juego de mesa UNO"; 
+// INICIALIZAMOS LA VARIABLE CON VALOR
+//SE PUEDE INICIALIZAR SIN DARLE NINGUN VALOR
+let disponible;
+
+// EN JAVASCRIPT EL ; NO ES TAN IMPORTANTE, 
+//PERO ACONSEJO
+// PONERLO, JAVASCRIPT NO ES MUY ESTRICTO
+
+/* 
+3 PARTES
+
+    PALABRA RESERVADA let
+    NOMBRE A LA VARIABLE (VEREMOS REGLAS)
+    VALOR A LA VARIABLE
+
+
+LAS VARIABLES EN JAVASCRIPT NO HAY QUE DECLARARLE 
+EL TIPO DE DATO, NUMERO, TEXTO, BOOLEANO... NO HACE FALTA
+*/
+disponible = true; // REASIGNANDO VALOR DE LA VARIABLE
+disponible = false;
+
+
+// const categoria1 ="Juego de mesa";
+// categoria1= "Juego Simplemente"
+/*
+ES UN LENGUAJE DE TIPO DINAMICO. GUARDA EL TIPO DE DATO EN
+EL VALOR QUE TIENE Y NO EN LA VARIABLE
+
+
+PARA INICIALIZAR MÚLTIPLES VARIABLES, HACEMOS USO DE LA ,
+PARA AHORRARNOS TENER QUE IR PONIENDO let REPETIDAMENTE
+*/
+
+let camiseta = "red",
+    pantalon = "yellow",
+    zapatos = "blue";
+
+console.log("Producto: ",producto);
+
+
+
+
+
+console.log("CAMISETA: ",camiseta);
+console.log("PANTALON: ",pantalon);
+console.log("ZAPATOS: ",zapatos);
+
+
+
+let producto1 = "DOOBLE",
+    disponible1 = false,
+    categoria1 = "Juegos de mesa";
+
+
+console.log ("EL PRODUCTO",producto1,"QUE PERTENECE A LA CATEGORIA:",
+categoria1, "TIENE DISPONIBILIDAD",disponible1);
+
+/*
+EL NOMBRE DE LAS VARIABLES NO PUEDEN INICIALIZAR 
+CON NÚMEROS NI
+CARACTERES ESPECIALES
+
+LAS VARIABLES LAS VEMOS EN EL INSPECTOR POR CONSOLA
+
+COMENTAR EL CODIGO DEL ALERT("HOLA MUNDO");
+
+
+!!!!!!!!!!!!!!!!
+EJERCICIO
+INICIALIZAR UNA VARIABLES CON UN NOMBRE QUE EMPIECE
+POR NUMERO Y VER EL ERROR POR PANTALLA
+*/
+
+let numero1;
+// let 1numero;
+
+/*
+
+ESTILOS PARA CREAR VARIABLES
+
+let nombre_producto = "A"; // UNDERSCORE
+let nombreProducto = "A"; //CAMELCASE, EL MÁS USADO
+let NombreProducto = "A"; //PASCAL CASE
+let nombreproducto = "A"; 
+
+JAVASCRIPT TIENE EN CUENTA MAYUSCULAS Y MINUSCULAS, IMPORTANTE
+COMO VEMOS LAS VARIABLES POR CONSOLA???
+*/
+// console.log("Produco con mayuscula",Producto);
+
+
+// VARIABLES CON VAR
+/* 
+
+PARA VAR SE APLICA TODO LO VISTO CON LET, EXACTAMENTE IGUAL
+CUAL ES LA DIFERENCIA? 
+
+VAR ERA LA FORMA ANTIGUA DE DECLARRA VARIABLES
+
+VAR TIENE UN AMBITO GLOBAL
+LET TIENE UN AMBITO LOCAL, SOLUCIONA LOS ERRORES DE VAR
+
+EJEMPLO
+
+var contador = 0;
+if (contador <2) {
+    var total = 2;
+}
+console.log (total); //2
+
+
+
+let contador = 0;
+if (contador <2) {
+    let total = 2;
+}
+console.log (total); //TOTAL IS NOS DEFINED
+
+
+
+VARIABLES CON CONST
+
+PARA VALORES FIJOS QUE NO SE VAYAN A MODIFICAR
+
+    NO SE PUEDE INICIALIZAR CON CONST SIN VALOR
+    SIEMPRE DEBEN TENER VALOR
+
+    NO SE PUEDE REASIGNAR
+
+!!!!!!!!!!!!!!!!
+EJERCICIO
+CREAR UNA VARIABLE CON CONST SIN INICIALIZAR VALOR
+E IDENTIFICAR EL ERROR
+
+
+USAREMOS CONST Y LET A LO LARGO DEL CURSO
+IR A 02.JS
+*/
+
+const constante1=1;
+console.log("Ejercicio de asignacion de constantes: ",constante1);
+

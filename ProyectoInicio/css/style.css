@@ -83,11 +83,11 @@ a {
 
 }
 
-.MenuEnlaces .info {
+.info {
     background-color: var(--ColorPrincipal);
     font-size: 14px;
     font-weight: 700;
-    color: #fff;
+    color: #fff !important;
     border-radius: 20px;
     padding: 0.8rem 1.3rem;
     text-decoration: none;
@@ -97,7 +97,7 @@ a {
     text-decoration: underline;
 }
 
-.MenuEnlaces .info:hover {
+.info:hover {
     text-decoration: none;
     background-color: #117a8b;
 }
